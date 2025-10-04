@@ -1,0 +1,233 @@
+body{
+  background-color:slategray ;
+  margin-bottom: 1.0rem;}
+
+
+.main-selector{
+  background-color: #004646;
+  border-radius: 20px;
+  color:#fff;
+  padding:10px auto;
+  margin:20px auto;
+}
+.main-selector header{
+  font-family:georgia, serif ;
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 2.0rem;
+  background-color: cyan ;
+  text-align: center;
+  text-decoration: underline solid 3px;
+  display: inline;
+  color: #000;
+  border-radius: 10px;
+  padding:5px 4px;
+}
+
+.main-selector p,ul{
+  font-family: verdana, sans-serif ;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.main-selector code{
+  font: italic bold 1.3rem/20px"Courier New",monospace;
+  color: #0f0;}
+  
+
+.main-selector pre{
+  background-color: #303030; 
+  color: gold;  
+  display: block; 
+  padding: 5px 10px; 
+  outline: 5px solid grey;
+  border-radius: 20px;
+  font-family: 'Courier New', monospace; 
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: bolder;
+  white-space: pre-wrap; 
+  overflow-x: auto; 
+}
+/* Top bar */
+#topbar h1 {
+  font-family: "brush script",fantasy;
+  font-size: 2.5rem;      
+  font-weight: bolder;       
+  text-align: center;     
+  color: goldenrod;       
+  margin-top: 20px;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 2px black, 0px 0px 3px blue,
+0px 0px 5px red;}
+
+#topbar .highlight {
+  color: #16a085;         
+  font-style: italic;} 
+#topbar {
+  background-color: #fff;
+  color: white;
+  padding: 5px;
+  position: sticky;
+  top:0rem;
+  width: 100%;
+  z-index: 1000;
+  padding: 5px;
+  border: 2px solid #4CAF50;
+}
+
+
+#menu-btn {
+  position: fixed;
+  top:8rem;
+  left:15px;
+  font-size:2.8rem;
+  font-weight: bolder;
+  font-family: georgia;
+  background:black;
+  color: white;
+  paddng:20px 20px;
+  margin:10px;
+  border-radius: 10px;
+  boder:2px solid blsck;
+  cursor: pointer;
+  z-index:1001;
+}
+
+/* Navbar hidden by default */
+#navbar {
+  position: fixed;
+  left:0; 
+  top:0;
+  width: 50%;
+  height: 100%;
+  background: black;
+  display: none; *
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: bottom 0.5s ease-in-out;
+  z-index: 1000;}
+
+#main-doc {
+  margin-left: 260px;
+  padding: 20px;
+}
+#navbar ul{
+  list-style:none;
+  text-align-last: left;
+  width: 100%;
+}
+
+#navbar ul li{
+  margin: 30px 0;
+}
+#navbar ul li a:hover{
+  background: green;
+}
+
+
+/* Navbar when active*/
+#navbar.active {
+  bottom: 0;   /* slide into view */
+}
+
+#navbar .nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 3rem;
+  margin: 15px 0;
+  font-family: garamond;
+  transition: color 0.3s;}
+
+#navbar .nav-link:hover {
+  color: #16a085;}
+
+/* General link styling */
+a {
+  text-decoration: none;    
+  color: #00ff88;           
+  font-size: 1.2rem;        
+  font-weight: bold;         
+  padding: 10px 15px;        
+  border-radius: 5px;        
+  transition: all 0.3s ease; 
+}
+
+/* Hover effect */
+a:hover {
+  background: #00ff88;        
+  color: black;              
+  transform: scale(1.1);       
+}
+
+/* Active (when clicked) */
+a:active {
+  background: #008f55;
+  color: white;
+}
+
+/* Optional: visited link color */
+a:visited {
+  color: #cc66ff;              
+}
+
+footer {
+  background-color: #222;
+  color: #eee;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+footer .footer-links {
+  margin-top: 10px;
+}
+
+footer a {
+  color: #4CAF50;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: gold;
+  text-decoration: underline;
+}
+
+footer i {
+  margin-right: 6px;
+}
+#main-doc {
+  margin-top: 60px;/* push down below top bar */
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  #navbar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  #main-doc {
+    margin-left: 0;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;  /* smaller text */
+  }
+
+  #navbar a {
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+  }
+}

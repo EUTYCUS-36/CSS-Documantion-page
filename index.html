@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="./style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>CSS DOCUMENTATION</title>
+</head>
+<body>
+  <div id="topbar">
+    <h1>Styling <span class="highlight">That Changes Everything</span></h1> 
+  </div>    
+    <div id="menu-btn">☰ Menu</div>
+  <nav id="navbar">
+   <ul>
+     <h2>CSS Documentation</h2>
+    
+      <li> <a class="nav-link" href="#Introduction">Introduction</a></li>
+   <li><a class="nav-link" href="#Selectors">Selectors</a></li> 
+  <li><a class="nav-link" href="#Color_and_Background">Color and Background</a></li>  
+    <li></li> <a class="nav-link" href="#Text_Styling">Text Styling</a>
+  <li><a class="nav-link" href="#Box_Model">Box Model</a></li>   
+    <li><a class="nav-link" href="#Position_and_Display">Position and Display</a></li> 
+    <li><a class="nav-link" href="#Flexbox_and_Grid">Flexbox and Grid</a></li> 
+    <li><a class="nav-link" href="#Responsive_Design">Responsive Design</a></li> 
+<li><a class="nav-link" href="#Animation_and_Transitions">Animation and Transitions</a></li> 
+<li><a class="nav-link" href="#Conclusion">Conclusion</a></li> 
+  </ul>
+  </nav>
+
+  <main id="main-doc">
+    <section class="main-selector" id="Introduction">
+      <header>Introduction</header>
+      <p>CSS (Cascading Style Sheets) is a stylesheet language used to describe the presentation of HTML documents. It allows developers to control the layout, colors, fonts, and overall look of a web page.</p>
+      <figure>
+  <img src="./col1.jpg" alt="Computer code" height="200px" width="100%">
+  <figcaption>Welcome to another phase of coding.</figcaption>
+</figure>
+
+<p>Before CSS, web pages were styled directly inside HTML using attributes like <code>bgcolor</code> or <code>font</code>. CSS separated design from structure, making websites easier to build, maintain, and scale.</p>
+
+<p>The main idea of CSS is that you can apply a set of styles to multiple elements at once, which saves time and ensures consistency across a website.</p>
+      <div>
+        <code>
+          <pre>
+p { color: blue; font-size: 16px; }           
+          </pre>
+        </code>
+      </div>
+
+<ul>
+  <li>CSS means "Cascading Style Sheets".</li>
+  <li>It controls how HTML elements are displayed.</li>
+  <li>It makes websites more attractive and easier to manage.</li>
+</ul>
+    </section><hr>
+    <section class="main-selector" id="Selectors">
+      <header>Selectors</header>
+      <p>Selectors in CSS are patterns used to target and style HTML elements. They tell the browser which elements to apply the styles to.</p>
+
+<p>Without selectors, CSS rules would not know where to apply. For example, you may want to style only all paragraphs, a single button, or all elements with a specific class.</p>
+
+<p>Here are some of the most common selectors:</p>
+      
+      <div>
+        <code>
+          <pre>
+p { color: red; }
+#main { background-color: lightblue; }
+.highlight { font-weight: bold; }      
+          </pre>
+        </code>        
+      </div>   
+
+<ul>     
+  <li><strong>Element Selector</strong>: targets all elements of a type, e.g., <code>p</code>.</li>
+  <li><strong>ID Selector</strong>: targets a unique element with an <code>id</code>, e.g., <code>#main</code>.</li>
+  <li><strong>Class Selector</strong>: targets all elements with a given class, e.g., <code>.highlight</code>.</li>
+</ul>
+    </section><hr>
+    
+    <section class="main-selector" id="Color_and_Background">
+      <header>Color and Background</header>
+       <p>Colors in CSS allow you to style the text, background, and borders of elements. You can use different formats to define colors, depending on your preference and design needs.</p>
+
+<p>Common color formats include color names, HEX codes, RGB values, and HSL values. Each format gives you flexibility when working with colors.</p>
+      
+      <div>
+        <code>
+          <pre>
+ h1 { color: blue; }   
+p { color: #ff5733; }  
+div { background-color: rgb(0, 255, 0); }   
+section { background-color: hsl(200, 100%, 50%); }            
+          </pre>
+        </code>
+      </div>
+
+<ul>
+  <li><strong>Color Names:</strong> e.g., <code>red</code>, <code>blue</code>, <code>green</code>.</li>
+  <li><strong>HEX:</strong> e.g., <code>#ff5733</code>, used a lot in web design.</li>
+  <li><strong>RGB:</strong> defines color using red, green, and blue values.</li>
+  <li><strong>HSL:</strong> stands for hue, saturation, and lightness.</li>
+</ul>      
+    </section><hr>
+    
+    <section class="main-selector" id="Text_Styling">
+      <header>Text Styling</header>
+      <p>Text styling in CSS allows you to control the appearance of text, including its size, color, alignment, and decoration. It makes your webpage more readable and visually appealing.</p>
+      
+      <div>
+        <code>
+          <pre>
+p {
+  font-size: 16px;
+  color: navy;
+  text-align: center;
+  text-decoration: underline;}
+          </pre>
+        </code>
+      </div>
+
+<ul>
+  <li><strong>font-size:</strong> Controls how big or small the text appears.</li>
+  <li><strong>color:</strong> Sets the text color.</li>
+  <li><strong>text-align:</strong> Defines text alignment (left, right, center, justify).</li>
+  <li><strong>text-decoration:</strong> Adds effects like underline, overline, or line-through.</li>
+</ul>
+    </section><hr>
+    
+    <section class="main-selector" id="Box_Model">
+      <header>Box Model</header>
+      <p>The CSS box model is the foundation of web design layout. Every element on a webpage is treated as a rectangular box, which consists of four main parts.</p>
+
+<p>Understanding the box model helps you control spacing, borders, and overall layout structure.</p>
+      
+      <div>
+       <code>
+        <pre> div {
+  width: 200px;
+  padding: 20px;
+  border: 5px solid black;
+  margin: 10px;}
+        </pre>
+       </code>
+      </div>
+      
+
+<ul>
+  <li><strong>Content:</strong> The text or images inside the element.</li>
+  <li><strong>Padding:</strong> Space between the content and the border.</li>
+  <li><strong>Border:</strong> A line that surrounds the padding and content.</li>
+  <li><strong>Margin:</strong> Space between the element and other elements outside it.</li>
+</ul>
+    </section><hr>
+    
+    <section class="main-selector" id="Position_and_Display">
+      <header>Position and Display</header>
+      <p>The <strong>position</strong> and <strong>display</strong> properties in CSS are used to control how elements are placed and shown on a webpage.</p>
+      
+      <div>
+        <code>
+        <pre>
+div {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+  display: inline-block;
+}
+        </pre>
+        </code>
+      </div>
+  
+<ul>
+  <li><strong>position:</strong> Defines how an element is placed. Common values include:
+    <ul>
+      <li><em>static</em> (default, follows normal flow)</li>
+      <li><em>relative</em> (moves relative to its normal position)</li>
+      <li><em>absolute</em> (positions relative to the nearest positioned parent)</li>
+      <li><em>fixed</em> (sticks to the screen even when scrolling)</li>
+      <li><em>sticky</em> (switches between relative and fixed when scrolling)</li>
+    </ul>
+  </li>
+  <li><strong>display:</strong> Defines how an element is shown:
+    <ul>
+      <li><em>block</em> (starts on a new line, full width)</li>
+      <li><em>inline</em> (flows in line, like text)</li>
+      <li><em>inline-block</em> (inline but allows setting width/height)</li>
+      <li><em>flex</em> (for flexible layouts)</li>
+      <li><em>grid</em> (for grid layouts)</li>
+    </ul>
+  </li>
+</ul>
+    </section><hr>
+    
+    <section class="main-selector" id="Flexbox_and_Grid">
+      <header>Flexbox and Grid</header>
+      <p>CSS <strong>Flexbox</strong> and <strong>Grid</strong> are modern layout systems that make it easier to design complex, responsive web layouts.</p>
+      <div>
+        <code>
+          <pre>
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+          </pre>
+        </code>
+      </div>
+
+<ul>
+  <li><strong>Flexbox:</strong>
+    <ul>
+      <li>One-dimensional layout (works in a row <em>or</em> column).</li>
+      <li>Useful for aligning items and distributing space.</li>
+      <li>Key properties: <code>justify-content</code>, <code>align-items</code>, <code>flex-direction</code>.</li>
+    </ul>
+  </li>
+  
+  <li><strong>Grid:</strong>
+    <ul>
+      <li>Two-dimensional layout (rows <em>and</em> columns).</li>
+      <li>Useful for building entire page structures.</li>
+      <li>Key properties: <code>grid-template-columns</code>, <code>grid-template-rows</code>, <code>gap</code>.</li>
+    </ul>
+  </li>
+</ul>
+      <aside>
+  <p><strong>Tip:</strong> Use Flexbox for one-dimensional layouts, Grid for two-dimensional layouts.</p>
+</aside>
+    </section><hr>
+    
+    <section class="main-selector" id="Responsive_Design">
+      <header>Responsive Design</header>
+       <p>Responsive design means making websites look good and usable on all devices — desktops, tablets, and phones. It prevents content from breaking or looking too small on different screen sizes.</p>
+      <div>
+        <code>
+          <pre>
+@media (max-width: 768px) {
+  body {
+    background-color: lightblue;
+  }
+}            
+          </pre>
+        </code>
+      </div>
+
+<ul>
+  <li><strong>Responsive Design:</strong> Ensures layouts adjust automatically to fit screens of different sizes.</li>
+  <li><strong>Media Queries:</strong> CSS rules that apply only under certain conditions (like screen width).</li>
+  <li><strong>Fluid Layouts:</strong> Using percentages instead of fixed pixels for widths.</li>
+  <li><strong>Flexible Images:</strong> Setting images to <code>max-width: 100%</code> so they shrink on small screens.</li>
+</ul>
+    </section><hr>
+    
+    <section class="main-selector" id="Animation_and_Transitions">
+      <header>Animation and Transitions</header>
+      <p>CSS animations and transitions bring life to websites. They make changes smoother and can grab the user’s attention without JavaScript.</p>
+      
+      <div>
+        <code>
+          <pre>
+div {
+  transition: background-color 0.5s ease;
+}
+div:hover {
+  background-color: lightgreen;
+}  
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+.box {
+  animation: slideIn 1s ease-in-out;
+}            
+          </pre>
+        </code>
+      </div>
+
+<ul>
+  <li><strong>Transitions:</strong> Smoothly change CSS properties (like color, size, or opacity).</li>
+  <li><strong>Animations:</strong> Use <code>@keyframes</code> to create complex, multi-step effects.</li>
+  <li><strong>Hover Effects:</strong> A common use of transitions, triggered when the user hovers.</li>
+  <li><strong>Attention Grabbers:</strong> Animations can highlight important elements (like buttons).</li>
+</ul>
+    </section><hr>
+    
+    <section class="main-selector" id="Conclusion">
+      <header>Conclusion</header>
+      <p>CSS is the foundation of styling on the web. By mastering its basics and advanced features, you can create professional, responsive, and engaging websites. Remember to always keep your code clean, organized, and reusable.</p>
+
+<ul>
+  <li><strong>Start Small:</strong> Master simple selectors and properties before moving to complex layouts.</li>
+  <li><strong>Practice:</strong> Apply what you learn by building small projects regularly.</li>
+  <li><strong>Stay Updated:</strong> CSS evolves constantly, so keep learning new features.</li>
+</ul>
+
+<p>Here are some recommended resources to continue learning CSS:</p>
+
+<ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">MDN CSS Documentation</a></li>
+  <li><a href="https://www.w3schools.com/css/" target="_blank">W3Schools CSS Tutorial</a></li>
+  <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks Blog</a></li>
+  <li><a href="https://freecodecamp.org" target="_blank">FreeCodeCamp CSS Lessons</a></li>
+</ul>❤️
+    </section><hr>
+    
+  </main>
+  <footer>
+  <p>&copy; 2025 CSS Technical Documentation | Built with ❤️ by Eutycus</p>
+  <p class="footer-links">
+    <a href="#"><i class="fas fa-home"></i> Home</a>
+    <a href="#"><i class="fas fa-info-circle"></i> About</a>
+    <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+    <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+  </p>
+</footer>
+
+  <script>
+  const menuBtn = document.getElementById("menu-btn");
+const navbar = document.getElementById("navbar");
+const navLinks = document.querySelectorAll("#navbar ul li a");
+
+menuBtn.addEventListener("click", () => {
+  // Toggle navbar visibility
+  navbar.style.display = navbar.style.display === "flex" ? "none" : "flex";
+  navbar.style.flexDirection = "column";
+});
+
+// When a nav link is clicked → close menu
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    navbar.style.display = "none";
+  });
+});
+  
+</script>
+</body>
+</html>
